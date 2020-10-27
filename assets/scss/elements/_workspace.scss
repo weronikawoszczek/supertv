@@ -11,6 +11,11 @@
     background-color: white;
   }
 
+  &--center {
+    justify-content: center;
+    align-items: center;
+  }
+
   &__block {
     display: flex;
     flex-direction: column;
@@ -188,10 +193,15 @@
           margin-bottom: 0;
         }
       }
+
+      a{
+        color: black;
+      }
     }
 
     strong {
       font-family: $font-extrabold;
+      font-size: .9rem;
     }
 
     .sponsor {
@@ -294,8 +304,12 @@
   }
 
   .map {
-    width: 90%;
+    width: 98%;
     height: 500px;
     background-color: $main--dark;
+    margin: 10px;
+    @include media-breakpoint-down(sm) {
+      height: 300px;
+    }
   }
 }
