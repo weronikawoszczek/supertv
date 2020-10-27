@@ -7,12 +7,20 @@
     height: auto;
   }
 
+  &--white{
+    background-color: white;
+  }
+
   &__block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-content: space-between;
     flex: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
 
     &--big {
       min-width: 60%;
@@ -30,25 +38,27 @@
     }
 
     &--video {
-      padding: 15px 20px;
+      padding: 15px 0;
       background-color: white;
-      display: flex;
-      align-items: center
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video {
+      background-color: black;
+      width: 95%;
+      height: auto;
+    }
+
+    .media{
+      margin-top: 10px;
+      width: 95%;
+      height: 25px;
+      background-color: rgba(128, 157, 255, 0.43);
     }
 
     &--text {
       justify-content: space-between;
-    }
-
-    @include media-breakpoint-down(sm) {
-      width: 100%;
-    }
-
-    .video {
-      width: 90%;
-      height: 80%;
-      background-color: black;
-      min-height: 400px;
     }
 
     .text-div {
@@ -57,6 +67,22 @@
       margin-bottom: 10px;
       padding: 15px;
       background-color: white;
+    }
+
+    .text-div-wrapper{
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+      display: flex;
+    }
+
+    .text-div-small{
+      padding: 15px;
+      background-color: white;
+      width: 50%;
+      &:first-of-type{
+        margin-right: 10px;
+      }
     }
 
     .search {
@@ -69,7 +95,6 @@
 
     h4 {
       font-family: $font-bold;
-      text-transform: uppercase;
       margin-bottom: 20px;
     }
 
@@ -96,6 +121,8 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
+      flex-grow: 1;
+      align-content: space-between;
     }
 
     .block {
@@ -124,11 +151,14 @@
         font-family: $font-bold;
       }
     }
-    &--banner{
+
+    &--banner {
       padding: 20px 15px;
       background-color: white;
-      .banner-div{
+
+      .banner-div {
         background-color: #ff2f5d;
+        min-height: 400px;
         height: 100%;
         width: 100%;
         text-align: center;
@@ -136,39 +166,100 @@
         color: yellow;
       }
     }
-    &--sponsor{
 
-    }
-    .title{
+    .title {
       font-family: $font-bold;
       margin: 25px 15px;
     }
-    .numbers{
+
+    .numbers {
       width: 100%;
+      height: 100%;
       background-color: white;
       padding: 15px;
       display: flex;
       flex-direction: column;
-      span{
+
+      span {
         margin-bottom: 5px;
-        &:last-of-type{
+
+        &:last-of-type {
           margin-bottom: 0;
         }
       }
     }
-    strong{
+
+    strong {
       font-family: $font-extrabold;
     }
-    .sponsor{
+
+    .sponsor {
       background-color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100%;
+
       a {
-        max-width: 50%;
+        max-width: 53%;
         margin: 0 auto;
       }
     }
+
+    &--gif{
+      background-color: white;
+      padding: 20px 15px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .news{
+      width: 300px;
+      border: 1px solid black;
+      margin-top: 5px;
+      ul{
+        margin: 0;
+        padding: 15px 0 15px 25px;
+        font-size: .9rem;
+      }
+      li{
+        margin-bottom: 8px;
+        a{
+          color: black;
+          @include animate;
+          border-bottom: 1px solid rgba(0, 0, 0, 0);
+          &:hover{
+            border-bottom: 1px solid black;
+            @include animate;
+          }
+        }
+      }
+    }
+
+    .news-title{
+      background-color: black;
+      color: white;
+      font-family: $font-bold;
+      font-size: 1.2rem;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 7px;
+    }
+
+    &--radio {
+      padding: 20px 0;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .radio {
+      background-color: $radio-color;
+      width: 95%;
+      height: 60px;
+      display: block;
+    }
+
+
   }
 }

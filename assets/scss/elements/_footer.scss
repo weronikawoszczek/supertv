@@ -3,13 +3,23 @@
   color: $footer-text-color;
   padding: 25px 10px;
 
-  .workspace__block{
+  .workspace__block {
     justify-content: flex-start;
-    &--footer-left{
+
+    &--footer-left {
       width: 100%;
+      @media (max-width: 420px) {
+        text-align: center;
+        margin-bottom: 35px;
+      }
     }
-    &--footer-right{
+
+    &--footer-right {
       margin-left: 20%;
+      @media (max-width: 420px) {
+        text-align: center;
+        margin-left: 0;
+      }
     }
   }
 
@@ -17,16 +27,20 @@
     font-family: $font-bold;
   }
 
-  a{
+  a {
     margin-bottom: 8px;
     font-size: .9rem;
   }
 
-  span{
+  span {
     font-size: .9rem;
+    @media (max-width: 420px) {
+      display: block;
+      text-align: center;
+    }
   }
 
-  p{
+  p {
     color: #706c69;
     margin: 3rem 0 2rem;
     text-align: center;

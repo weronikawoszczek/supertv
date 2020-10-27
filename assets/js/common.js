@@ -1,21 +1,23 @@
 app.common = {
     mainInit: () => {
 
-        $('.nav-icon1').click(function(e){
+        $('.nav-icon1').click(function (e) {
 
             e.preventDefault();
             e.stopPropagation();
 
             $(this).toggleClass('open');
             $('.topMenu').toggleClass('opened');
-            if( $('.header-scroll').hasClass('scrolled') ) {
+            $('body').toggleClass('freeze');
+            if ($('.header-scroll').hasClass('scrolled')) {
                 $('.header-scroll').removeClass('scrolled');
             }
 
-            $(document).on('click', function closeMenu (){
-                if($('.topMenu').hasClass('opened')){
+            $(document).on('click', function closeMenu() {
+                if ($('.topMenu').hasClass('opened')) {
                     $('.topMenu').removeClass('opened');
                     $('.menuToggle').removeClass('open');
+                    $('body').toggleClass('freeze');
 
                 } else {
                     $(document).on('click', closeMenu);
@@ -23,7 +25,7 @@ app.common = {
             });
         });
 
-        $('.nav-el').on('click', function(e) {
+        $('.nav-el').on('click', function (e) {
             $('.nav-el').removeClass('active');
             $(this).addClass('active');
         });
@@ -34,5 +36,15 @@ app.common = {
 $(function () {
     $(document).ready(() => {
         app.common.mainInit();
+
     })
+
+        var videoWidth = $('.video').outerWidth();
+        $(".video").height(videoWidth * 9 / 16);
 });
+
+$( window ).resize(function() {
+    var videoWidth = $('.video').outerWidth();
+    $(".video").height(videoWidth * 9 / 16);
+});
+

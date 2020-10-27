@@ -1,5 +1,5 @@
 .header {
-  padding: 25px 25px 45px 25px;
+  padding: 25px;
   position: relative;
   left: 0;
   top: 0;
@@ -10,15 +10,13 @@
   display: flex;
   align-items: center;
   @include animate;
-  @media (max-width: 1000px) {
-    padding: 25px;
-  }
   @include media-breakpoint-down(sm) {
     padding: 20px;
   }
   @media (max-width: 420px) {
     height: 108px;
   }
+
   a {
     text-transform: uppercase;
     @include makeRem(22);
@@ -174,9 +172,8 @@
 .topMenu {
   @include animate;
   position: absolute;
-  right: -100%;
-  top: 150px;
-  height: calc(100vh - 150px);
+  right: 0;
+  top: 140px;
   overflow: scroll;
   z-index: 95;
   background-color: $main;
@@ -185,24 +182,23 @@
   opacity: 0;
   flex-direction: column;
   justify-content: space-between;
-display: none;
+  display: flex;
+  height: 0;
+  width: 0;
   @include animate;
-  &.opened {
-    opacity: 1;
-    right: 0;
-    width: 100%;
-    display: flex;
-    @include animate;
-  }
-
-  @include media-breakpoint-down(sm) {
-    top: 140px;
-    width: 100%;
-    padding: 30px 20px 15px 20px;
-  }
 
   @media (max-width: 420px) {
     top: 108px;
+  }
+
+  &.opened {
+    opacity: 1;
+    width: 100%;
+    height: calc(100vh - 150px);
+    @include animate;
+    @media (max-width: 420px) {
+      height: calc(100vh - 108px);
+    }
   }
 
   ul {
@@ -223,4 +219,5 @@ display: none;
     align-items: center;
   }
 }
+
 
