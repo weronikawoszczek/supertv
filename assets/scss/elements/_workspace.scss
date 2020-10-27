@@ -137,12 +137,12 @@
       padding: 10px;
 
       &-bg1 {
-        background: url(/dist/assets/img/bg1.jpg) no-repeat center center;
+        background: url(../img/bg1.jpg) no-repeat center center;
         background-size: cover;
       }
 
       &-bg2 {
-        background: url(/dist/assets/img/bg2.jpg) no-repeat center center;
+        background: url(../img/bg2.jpg) no-repeat center center;
         background-size: cover;
       }
 
@@ -259,7 +259,11 @@
       height: 60px;
       display: block;
     }
+  }
 
-
+  .map{
+    width: 90%;
+    height: 500px;
+    background-color: $main--dark;
   }
 }
