@@ -7,7 +7,7 @@
     height: auto;
   }
 
-  &--white{
+  &--white {
     background-color: white;
   }
 
@@ -50,7 +50,7 @@
       height: auto;
     }
 
-    .media{
+    .media {
       margin-top: 10px;
       width: 95%;
       height: 25px;
@@ -69,18 +69,19 @@
       background-color: white;
     }
 
-    .text-div-wrapper{
+    .text-div-wrapper {
       width: 100%;
       height: 100%;
       margin-bottom: 10px;
       display: flex;
     }
 
-    .text-div-small{
+    .text-div-small {
       padding: 15px;
       background-color: white;
       width: 50%;
-      &:first-of-type{
+
+      &:first-of-type {
         margin-right: 10px;
       }
     }
@@ -206,29 +207,60 @@
       }
     }
 
-    &--gif{
+    &--gif {
       background-color: white;
       padding: 20px 15px;
       align-items: center;
       justify-content: flex-start;
+      @media (max-width: 1200px) {
+        a {
+          max-width: 250px;
+        }
+      }
+      @media (max-width: 900px) {
+        a {
+          max-width: 200px;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        a {
+          max-width: 100%;
+        }
+      }
     }
 
-    .news{
+    .news {
       width: 300px;
       border: 1px solid black;
       margin-top: 5px;
-      ul{
+      @media (max-width: 1200px) {
+        max-width: 250px;
+      }
+      @media (max-width: 900px) {
+        max-width: 200px;
+      }
+      @include media-breakpoint-down(sm) {
+        max-width: 300px;
+      }
+      @media (max-width: 420px) {
+        max-width: 100%;
+      }
+
+      ul {
         margin: 0;
-        padding: 15px 0 15px 25px;
+        padding: 15px 5px 15px 25px;
         font-size: .9rem;
       }
-      li{
+
+      li {
         margin-bottom: 8px;
-        a{
+
+        a {
           color: black;
           @include animate;
           border-bottom: 1px solid rgba(0, 0, 0, 0);
-          &:hover{
+
+          &:hover {
             border-bottom: 1px solid black;
             @include animate;
           }
@@ -236,7 +268,7 @@
       }
     }
 
-    .news-title{
+    .news-title {
       background-color: black;
       color: white;
       font-family: $font-bold;
@@ -261,7 +293,7 @@
     }
   }
 
-  .map{
+  .map {
     width: 90%;
     height: 500px;
     background-color: $main--dark;
