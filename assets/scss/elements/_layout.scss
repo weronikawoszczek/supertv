@@ -1,16 +1,33 @@
 body {
   font-size: $baseSize+px;
   font-family: $font-main;
-  color: $main-text;
+  color: $main--text;
   line-height: 140%;
-}
-
-.page-limiter {
   display: flex;
+  padding: 8vw;
   max-width: 100vw;
-  flex-direction: column;
-  align-items: center;
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: 100%;
+  justify-content: center;
   position: relative;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/dist/assets/img/bg.jpeg) no-repeat center bottom;
+    z-index: -10;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 
 // responsive images
@@ -21,13 +38,12 @@ img {
 
 // links
 a {
-  color: $aux-darker;
   text-decoration: none;
-  @include makeRem(15);
   @include animate;
+  color: $link-color;
 
   &:hover, &:focus, &:active {
-    color: $main--light;
+    color: $accent;
     @include animate;
     text-decoration: none;
   }
@@ -62,22 +78,77 @@ $alignments: left, center, right;
   }
 }
 
-h1 {
-  @include makeRem(70);
-}
-
-h3 {
-  @include makeRem(60);
-  @include media-breakpoint-down(sm) {
-    font-size: 3.2rem;
-  }
-}
+//h3 {
+//  @include makeRem(60);
+//  @include media-breakpoint-down(sm) {
+//    font-size: 3.2rem;
+//  }
+//}
 
 span {
   @include makeRem(17);
 }
 
 p {
-  @include makeRem(12);
+  @include makeRem(13);
 }
 
+.site-limiter{
+
+}
+
+.page-limiter {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: $main;
+  //padding: 190px 10px 10px 10px;
+  padding: 10px;
+  @media (max-width: 150px) {
+    //padding-top: 150px;
+  }
+  @include media-breakpoint-down(sm) {
+    //padding-top: 140px;
+  }
+  @media (max-width: 420px) {
+    //padding-top: 108px;
+  }
+}
+
+.text-banner {
+  width: 100%;
+  font-family: $font-bold;
+  display: flex;
+  height: 40px;
+  margin-bottom: 18px;
+
+  &__title {
+    background-color: $aux;
+    color: white;
+    min-width: 10%;
+    padding: 12px 10px 10px;
+    text-align: center;
+  }
+
+  &__content {
+    background-color: $main--dark;
+    max-width: 90%;
+    white-space: nowrap;
+    display: block;
+    height: 100%;
+    padding: 12px 10px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.title{
+  font-family: $font-bold;
+  margin: 20px;
+  &-upper{
+    text-transform: uppercase;
+  }
+  @include media-breakpoint-down(sm) {
+  margin: 20px auto;
+  }
+}

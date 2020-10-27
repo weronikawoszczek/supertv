@@ -1,10 +1,33 @@
 app.common = {
     mainInit: () => {
-        let text = 'ES6 is working';
 
-        $('.costam').click(function () {
-            $('.costam').slideDown();
+        $('.nav-icon1').click(function(e){
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            $(this).toggleClass('open');
+            $('.topMenu').toggleClass('opened');
+            if( $('.header-scroll').hasClass('scrolled') ) {
+                $('.header-scroll').removeClass('scrolled');
+            }
+
+            $(document).on('click', function closeMenu (){
+                if($('.topMenu').hasClass('opened')){
+                    $('.topMenu').removeClass('opened');
+                    $('.menuToggle').removeClass('open');
+
+                } else {
+                    $(document).on('click', closeMenu);
+                }
+            });
         });
+
+        $('.nav-el').on('click', function(e) {
+            $('.nav-el').removeClass('active');
+            $(this).addClass('active');
+        });
+
     }
 }
 

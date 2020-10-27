@@ -1,0 +1,35 @@
+.footer {
+  background-color: $footer-color;
+  color: $footer-text-color;
+  padding: 25px 10px;
+
+  .workspace__block{
+    justify-content: flex-start;
+    &--footer-left{
+      width: 100%;
+    }
+    &--footer-right{
+      margin-left: 20%;
+    }
+  }
+
+  h5 {
+    font-family: $font-bold;
+  }
+
+  a{
+    margin-bottom: 8px;
+    font-size: .9rem;
+  }
+
+  span{
+    font-size: .9rem;
+  }
+
+  p{
+    color: #706c69;
+    margin: 3rem 0 2rem;
+    text-align: center;
+    font-size: .8rem;
+  }
+}
