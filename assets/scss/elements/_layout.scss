@@ -38,6 +38,10 @@ body {
   @media (max-width: 420px) {
     padding: 7vw;
   }
+
+  &.product{
+    max-width: 1350px;
+  }
 }
 
 // responsive images
@@ -171,6 +175,68 @@ p {
   font-family: $font-bold;
   color: $radio-color;
   font-size: 1.5rem;
+}
+
+.mixer-title{
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  strong{
+    font-family: $font-bold;
+  }
+}
+
+.product-list{
+  width: 100%;
+  background-color: white;
+  padding: 10px 10px 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-wrapper{
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  @media (max-width: 900px) {
+    max-width: 33.3%;
+  }
+  @include media-breakpoint-down(sm) {
+    max-width: 50%;
+  }
+  @media (max-width: 420px) {
+    max-width: 100%;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+    0 2px 2px rgba(0,0,0,0.12),
+    0 4px 4px rgba(0,0,0,0.12),
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+    margin-bottom: 10px;
+  }
+}
+
+.product-desc{
+  font-size: .7rem;
+  font-family: $font-bold;
+  text-align: center;
+}
+
+.product-price{
+  color: $aux;
+  font-family: $font-bold;
+  margin-bottom: 25px;
 }
 
 .margin-top{
