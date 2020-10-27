@@ -16,6 +16,13 @@
     align-items: center;
   }
 
+  &--bigger {
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
   &__block {
     display: flex;
     flex-direction: column;
@@ -32,6 +39,7 @@
       margin-right: 15px;
       @include media-breakpoint-down(sm) {
         width: 100%;
+        margin-right: 0;
       }
     }
 
@@ -47,6 +55,9 @@
       background-color: white;
       align-items: center;
       justify-content: center;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
     }
 
     .video {
@@ -64,6 +75,10 @@
 
     &--text {
       justify-content: space-between;
+      @media (max-width: 1024px) {
+        width: 100%;
+        margin-top: 10px
+      }
     }
 
     .text-div {
@@ -79,12 +94,22 @@
       height: 100%;
       margin-bottom: 10px;
       display: flex;
+      @media (max-width: 650px) {
+        flex-direction: column;
+      }
     }
 
     .text-div-small {
       padding: 15px;
       background-color: white;
       width: 50%;
+
+      @media (max-width: 650px) {
+        width: 100%;
+        &:first-of-type {
+          margin: 0 0 10px 0;
+        }
+      }
 
       &:first-of-type {
         margin-right: 10px;
@@ -121,6 +146,9 @@
       background-color: white;
       display: flex;
       flex-direction: column;
+      @media(max-width: 1024px) {
+        margin-right: 0;
+      }
     }
 
     .blocks-row {
@@ -161,15 +189,25 @@
     &--banner {
       padding: 20px 15px;
       background-color: white;
+      align-items: center;
+
+      @media(max-width: 1024px) {
+        width: 100%;
+        margin-top: 10px;
+      }
 
       .banner-div {
         background-color: #ff2f5d;
         min-height: 400px;
         height: 100%;
-        width: 100%;
+        width: 300px;
         text-align: center;
         padding-top: 45px;
         color: yellow;
+        @media(max-width: 420px) {
+          width: 250px;
+          max-width: 100%;
+        }
       }
     }
 
@@ -194,7 +232,7 @@
         }
       }
 
-      a{
+      a {
         color: black;
       }
     }
@@ -227,9 +265,10 @@
           max-width: 250px;
         }
       }
-      @media (max-width: 900px) {
+      @media (max-width: 1024px) {
+        width: 100%;
         a {
-          max-width: 200px;
+          max-width: 300px;
         }
       }
       @include media-breakpoint-down(sm) {
@@ -246,14 +285,13 @@
       @media (max-width: 1200px) {
         max-width: 250px;
       }
-      @media (max-width: 900px) {
-        max-width: 200px;
+      @media (max-width: 1024px) {
+        max-width: 600px;
+        width: 80%;
       }
-      @include media-breakpoint-down(sm) {
+      @media (max-width: 495px) {
         max-width: 300px;
-      }
-      @media (max-width: 420px) {
-        max-width: 100%;
+        width: 100%;
       }
 
       ul {

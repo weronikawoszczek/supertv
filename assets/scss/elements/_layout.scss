@@ -176,3 +176,17 @@ p {
 .margin-top{
   margin-top: 10px;
 }
+
+.display-desktop{
+  display: block;
+  @media(max-width: 1024px){
+    display: none;
+  }
+}
+
+.display-mobile{
+  display: none;
+  @media(max-width: 1024px){
+    display: block;
+  }
+}
