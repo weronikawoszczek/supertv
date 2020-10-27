@@ -38,10 +38,6 @@ body {
   @media (max-width: 420px) {
     padding: 7vw;
   }
-
-  &.product{
-    max-width: 1350px;
-  }
 }
 
 // responsive images
@@ -119,6 +115,10 @@ p {
   padding: 30px 10px 10px 10px;
   @media (max-width: 1000px) {
     padding-top: 10px;
+  }
+
+  &.product{
+    max-width: 1400px;
   }
 
   &.white{
