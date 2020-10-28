@@ -5,7 +5,7 @@ body {
   line-height: 140%;
   position: relative;
 
-  &.freeze {
+  &.freeze{
     overflow: hidden;
   }
 
@@ -85,18 +85,17 @@ $alignments: left, center, right;
   h#{$i} {
     margin: 0;
     padding: 0;
-
-    &.upper {
+    &.upper{
       text-transform: uppercase;
     }
   }
 }
 
-h4 {
+h4{
   font-size: 1.4rem;
 }
 
-h5 {
+h5{
   font-size: 1.1rem;
 }
 
@@ -118,32 +117,17 @@ p {
     padding-top: 10px;
   }
 
-  &.product {
+  &.product{
     max-width: 1400px;
   }
 
-  &.white {
+  &.white{
     background-color: $main--light;
     @media (max-width: 1000px) {
       padding-top: 30px;
     }
   }
 }
-
-@keyframes scroll {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-$duration: 30s;
 
 .text-banner {
   width: 100%;
@@ -159,7 +143,7 @@ $duration: 30s;
     text-align: center;
   }
 
-  &__wrapper {
+  &__content {
     background-color: $main--dark;
     width: 100%;
     white-space: nowrap;
@@ -167,20 +151,7 @@ $duration: 30s;
     height: 100%;
     padding: 12px 10px 10px;
     overflow: hidden;
-  }
-
-  &__content {
-    display: inline-block;
-    white-space: nowrap;
-
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-name: scroll;
-    animation-name: scroll;
-    -webkit-animation-duration: $duration;
-    animation-duration: $duration;
+    cursor: pointer;
   }
 
   &__item {
@@ -201,7 +172,7 @@ $duration: 30s;
   }
 }
 
-.title-radio {
+.title-radio{
   width: 100%;
   background-color: white;
   padding: 0 15px;
@@ -210,20 +181,19 @@ $duration: 30s;
   font-size: 1.5rem;
 }
 
-.mixer-title {
+.mixer-title{
   width: 100%;
   background-color: white;
   padding: 10px;
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
-
-  strong {
+  strong{
     font-family: $font-bold;
   }
 }
 
-.product-list {
+.product-list{
   width: 100%;
   background-color: white;
   padding: 10px 10px 30px 10px;
@@ -232,7 +202,7 @@ $duration: 30s;
   justify-content: space-between;
 }
 
-.product-wrapper {
+.product-wrapper{
   max-width: 25%;
   display: flex;
   flex-direction: column;
@@ -249,44 +219,44 @@ $duration: 30s;
     max-width: 100%;
   }
 
-  img {
+  img{
     max-width: 100%;
     height: auto;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
-    0 2px 2px rgba(0, 0, 0, 0.12),
-    0 4px 4px rgba(0, 0, 0, 0.12),
-    0 8px 8px rgba(0, 0, 0, 0.12),
-    0 16px 16px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+    0 2px 2px rgba(0,0,0,0.12),
+    0 4px 4px rgba(0,0,0,0.12),
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
     margin-bottom: 10px;
   }
 }
 
-.product-desc {
+.product-desc{
   font-size: .7rem;
   font-family: $font-bold;
   text-align: center;
 }
 
-.product-price {
+.product-price{
   color: $aux;
   font-family: $font-bold;
   margin-bottom: 25px;
 }
 
-.margin-top {
+.margin-top{
   margin-top: 10px;
 }
 
-.display-desktop {
+.display-desktop{
   display: block;
-  @media(max-width: 1024px) {
+  @media(max-width: 1024px){
     display: none;
   }
 }
 
-.display-mobile {
+.display-mobile{
   display: none;
-  @media(max-width: 1024px) {
+  @media(max-width: 1024px){
     display: block;
   }
 }

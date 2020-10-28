@@ -1,6 +1,17 @@
 app.common = {
     mainInit: () => {
 
+        $('.text-banner__content').marquee({
+            //speed in milliseconds of the marquee
+            duration: 10000,
+            //gap in pixels between the tickers
+            // gap: 50,
+            // duplicated: true
+            pauseOnHover:true,
+            pauseOnCycle:false,
+        });
+
+
         $('.nav-icon1').click(function (e) {
 
             e.preventDefault();
@@ -39,11 +50,11 @@ $(function () {
 
     })
 
-        var videoWidth = $('.video').outerWidth();
-        $(".video").height(videoWidth * 9 / 16);
+    var videoWidth = $('.video').outerWidth();
+    $(".video").height(videoWidth * 9 / 16);
 });
 
-$( window ).resize(function() {
+$(window).resize(function () {
     var videoWidth = $('.video').outerWidth();
     $(".video").height(videoWidth * 9 / 16);
 });
