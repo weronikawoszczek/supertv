@@ -1,0 +1,21 @@
+.m-datetime .m-datetime__date, .m-datetime .m-datetime__time {
+    color: #fff;
+    background: #31363d;
+    padding: 5px;
+    font-size: 10px;
+    line-height: 1;
+    float: left;
+}
+.m-datetime .m-datetime__date {
+    background-color: #005baa;
+}
+.m-datetime { display:none; }
+.m-datetime .clocktime { color: #fff; font-weight: 700; margin: 0; padding:0 5px; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px;}
+.m-datetime .m-datetime__date{ font-size: 0.8rem;}
+.m-datetime .m-datetime__time{ font-size: 0.8rem;}
+.m-datetime .m-datetime__time .clocktime{ font-size: 0.8rem;}
+.media {
+    display: flex;
+    justify-content: space-between;
+}
+.b-ads .is-active { display: block; }
