@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+    front:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./:/var/www
+        container_name: streamshow-supertv-layout

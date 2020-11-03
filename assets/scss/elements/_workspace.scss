@@ -137,11 +137,13 @@
     }
 
     .search {
-      background-color: white;
-      width: 100%;
-      padding: 8px;
-      align-items: center;
-      display: flex;
+      form {
+        background-color: white;
+        width: 100%;
+        padding: 8px;
+        align-items: center;
+        display: flex;
+      }
     }
 
     h4 {
@@ -296,9 +298,12 @@
         }
       }
     }
-
+    
+    .gif {
+      width: 430px;
+    }
     .news {
-      width: 300px;
+      width: 430px;
       border: 1px solid black;
       margin-top: 5px;
       @media (max-width: 1200px) {
