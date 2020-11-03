@@ -50,6 +50,26 @@
       }
     }
 
+    &--half {
+      min-width: 49%;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      &:first-of-type {
+        margin-right: 10px;
+        @include media-breakpoint-down(sm) {
+          margin: 0 0 15px 0;
+        }
+      }
+
+      &.workspace__block--banner{
+        margin: 0;
+      }
+    }
+
     &--video {
       padding: 15px 0;
       background-color: white;
@@ -336,7 +356,6 @@
     }
 
     .radio {
-      background-color: $radio-color;
       width: 95%;
       height: 60px;
       display: block;
