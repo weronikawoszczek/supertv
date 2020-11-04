@@ -9,12 +9,16 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
+  margin: 0 auto;
   @include animate;
   @include media-breakpoint-down(sm) {
     padding: 20px;
   }
   @media (max-width: 420px) {
     height: 108px;
+  }
+  @media (min-width: 1500px){
+    max-width: 1400px;
   }
 
   a {
