@@ -154,7 +154,7 @@
       margin-bottom: 20px;
     }
 
-    span {
+    .block-span {
       font-size: .9rem;
     }
 
@@ -204,6 +204,11 @@
       &__title {
         text-transform: uppercase;
         font-family: $font-bold;
+        font-size: .9rem;
+      }
+
+      &__desc{
+        font-size: .9rem;
       }
     }
 
@@ -246,6 +251,7 @@
 
       span {
         margin-bottom: 5px;
+        font-size: .9rem;
 
         &:last-of-type {
           margin-bottom: 0;

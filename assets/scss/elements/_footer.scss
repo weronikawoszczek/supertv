@@ -2,6 +2,11 @@
   background-color: $footer-color;
   color: $footer-text-color;
   padding: 25px 10px;
+  width: 100%;
+  margin: 0 auto;
+  @media (min-width: 1500px){
+    max-width: 1400px;
+  }
 
   .workspace__block {
     justify-content: flex-start;
