@@ -81,7 +81,6 @@
     }
 
     .video {
-      background-color: black;
       width: 95%;
       height: auto;
     }
@@ -175,14 +174,14 @@
     .blocks-row {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-evenly;
+      justify-content: start;
       flex-grow: 1;
       align-content: space-between;
     }
 
     .block {
-      width: 210px;
-      height: 130px;
+      width: 256px;
+      height: 144px;
       margin: 5px;
       display: flex;
       flex-direction: column;
@@ -202,9 +201,13 @@
       }
 
       &__title {
+        background-color: rgba(0, 0, 0, .5);
         text-transform: uppercase;
         font-family: $font-bold;
         font-size: .9rem;
+        a {
+          color: #FFF;
+        }
       }
 
       &__desc{
@@ -276,8 +279,15 @@
       height: 100%;
 
       a {
-        max-width: 53%;
+        max-width: 100%;
         margin: 0 auto;
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
@@ -369,6 +379,11 @@
       width: 95%;
       height: 60px;
       display: block;
+
+
+      audio {
+        width: 100%;
+      }
     }
   }
 

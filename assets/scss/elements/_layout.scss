@@ -136,12 +136,15 @@ p {
   display: flex;
   height: 40px;
   margin-bottom: 18px;
+  background-color: #c9cac9;
 
   &__title {
     background-color: $aux;
     color: white;
-    padding: 12px 10px 10px;
+    padding: 10px 10px 10px;
     text-align: center;
+    background: url(../img/logo_italpress.png);
+    width: 185px;
   }
 
   &__content {
@@ -149,14 +152,22 @@ p {
     white-space: nowrap;
     display: block;
     height: 100%;
-    padding: 12px 10px 10px;
+    padding: 8px 10px 10px;
     overflow: hidden;
     cursor: pointer;
+
   }
 
   &__item {
     display: inline-block;
-    margin-right: 5px;
+    a {
+      color: #000;
+    }
+    &-separator {
+      margin-right: 5px;
+      margin-left: 5px; 
+      color: #000;
+    }
   }
 }
 
