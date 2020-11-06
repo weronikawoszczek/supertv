@@ -174,12 +174,13 @@
     .blocks-row {
       display: flex;
       flex-wrap: wrap;
-      justify-content: start;
+      justify-content: space-around;
       flex-grow: 1;
-      align-content: space-between;
+      align-content: flex-start;
     }
 
     .block {
+      max-width: 30%;
       width: 256px;
       height: 144px;
       margin: 5px;
@@ -189,6 +190,20 @@
       color: white;
       font-weight: bold;
       padding: 10px;
+      overflow: hidden;
+
+      @media (max-width: 1200px){
+        max-width: 45%;
+      }
+      @media (max-width: 1200px){
+        max-width: 30%;
+      }
+      @media (max-width: 850px){
+        max-width: 45%;
+      }
+      @media (max-width: 600px){
+        max-width: 98%;
+      }
 
       &-bg1 {
         background: url(../img/bg1.jpg) no-repeat center center;
@@ -201,17 +216,31 @@
       }
 
       &__title {
-        background-color: rgba(0, 0, 0, .5);
         text-transform: uppercase;
+        position: relative;
         font-family: $font-bold;
         font-size: .9rem;
+        z-index: 1;
         a {
           color: #FFF;
+        }
+        &::before{
+          background-color: rgba(0,0,0,.5);
+          content: '';
+          display: block;
+          height: 120px;
+          position: absolute;
+          width: 120%;
+          top: -10px;
+          z-index: -1;
+          bottom: auto;
+          left: -10%;
         }
       }
 
       &__desc{
         font-size: .9rem;
+        z-index: 1;
       }
     }
 
