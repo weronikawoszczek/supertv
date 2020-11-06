@@ -7,4 +7,5 @@ services:
             dockerfile: Dockerfile
         volumes:
             - ./:/var/www
+            - ../public/assets/front/css:/var/public/assets/front/css
         container_name: streamshow-supertv-layout

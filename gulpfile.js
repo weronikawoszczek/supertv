@@ -59,6 +59,7 @@ gulp.task('styles', function () {
     .pipe(csso())
     // Output
     .pipe(gulp.dest('./dist/assets/css'))
+    .pipe(gulp.dest('./../public/assets/front/css'))
     .pipe(connect.reload())
 });
 
