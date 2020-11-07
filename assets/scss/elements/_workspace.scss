@@ -80,6 +80,10 @@
       }
     }
 
+    .static-page {
+      padding: 20px;
+    }
+
     .video {
       width: 95%;
       height: auto;
@@ -194,6 +198,7 @@
       font-weight: bold;
       padding: 10px;
       overflow: hidden;
+      cursor: pointer;
 
       @media (max-width: 1200px) {
         max-width: 45%;
