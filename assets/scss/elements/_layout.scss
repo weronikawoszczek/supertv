@@ -95,9 +95,9 @@ h5{
   font-size: 1.1rem;
 }
 
-span {
-  @include makeRem(17);
-}
+//span {
+//  @include makeRem(17);
+//}
 
 p {
   @include makeRem(13);
