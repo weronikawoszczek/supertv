@@ -145,6 +145,8 @@ p {
     text-align: center;
     background: url(../img/logo_italpress.png);
     width: 185px;
+    background-position: center center;
+    background-size: contain;
   }
 
   &__content {
