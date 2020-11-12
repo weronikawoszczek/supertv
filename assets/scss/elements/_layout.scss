@@ -144,9 +144,11 @@ p {
     padding: 10px 10px 10px;
     text-align: center;
     background: url(../img/logo_italpress.png);
-    width: 185px;
+    width: 170px;
     background-position: center center;
     background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -2px;
   }
 
   &__content {
