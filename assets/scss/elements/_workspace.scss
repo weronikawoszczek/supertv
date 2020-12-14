@@ -93,6 +93,12 @@
       margin-top: 10px;
       width: 95%;
       height: 25px;
+
+      @media (max-width: 600px) {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &--text {
@@ -426,7 +432,6 @@
 
     .radio {
       width: 95%;
-      height: 60px;
       display: block;
 
 

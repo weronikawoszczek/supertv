@@ -19,3 +19,10 @@
     justify-content: space-between;
 }
 .b-ads .is-active { display: block; }
+
+@media (max-width: 600px) {
+    .m-datetime {
+        display: flex;
+        margin-left: 8px;
+    }
+}

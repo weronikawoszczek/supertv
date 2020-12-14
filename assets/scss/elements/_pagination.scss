@@ -1,0 +1,41 @@
+.m-pagination {
+  margin-top: 2rem;
+  ul {
+    display: table;
+    padding-left: 0;
+    margin: 0;
+    border-radius: 4px;
+
+    > li {
+      width: 50px;
+      display: table-cell;
+      > a,
+      > span{
+        width: 100%;
+        position: relative;
+        padding: 12px 12px;
+        line-height: 1.42857143;
+        color: $blue;
+        text-decoration: none;
+        background-color: #fff;
+        display: block;
+        text-align: center;
+        border-right: 1px solid #e3e3e3;
+        &:hover{
+          background: $blue;
+          color: #fff;
+        }
+        &.active {
+          background: $blue;
+          color: #fff;
+        }
+      }
+    }
+
+    > li:last-child > a{
+      border-right: 0;
+    }
+
+
+  }
+}
